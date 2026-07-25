@@ -164,55 +164,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Ball.cpp" />
-    <ClCompile Include="Block.cpp" />
-    <ClCompile Include="BlockFactory.cpp" />
-    <ClCompile Include="BlocksDestroyObserver.cpp" />
-    <ClCompile Include="Bonus.cpp" />
-    <ClCompile Include="DurableBlock.cpp" />
-    <ClCompile Include="GameStateVictory.cpp" />
-    <ClCompile Include="GlassBlock.cpp" />
-    <ClCompile Include="Paddle.cpp" />
-    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameMain.cpp" />
-    <ClCompile Include="GameStatePauseMenu.cpp" />
-    <ClCompile Include="GameStateGameOver.cpp" />
-    <ClCompile Include="GameStateMainMenu.cpp" />
-    <ClCompile Include="GameStatePlaying.cpp" />
-    <ClCompile Include="GameStateRecords.cpp" />
-    <ClCompile Include="LevelLoader.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="MenuBackground.cpp" />
-    <ClCompile Include="Text.cpp" />
-    <ClCompile Include="UnbreakableBlock.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Application.h" />
-    <ClInclude Include="Ball.h" />
-    <ClInclude Include="Block.h" />
-    <ClInclude Include="BlockFactory.h" />
-    <ClInclude Include="BlockObserver.h" />
-    <ClInclude Include="BlocksDestroyObserver.h" />
-    <ClInclude Include="Bonus.h" />
-    <ClInclude Include="Collidable.h" />
-    <ClInclude Include="DurableBlock.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GameStateVictory.h" />
-    <ClInclude Include="GlassBlock.h" />
-    <ClInclude Include="Paddle.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameSettings.h" />
-    <ClInclude Include="GameStatePauseMenu.h" />
-    <ClInclude Include="GameStateGameOver.h" />
-    <ClInclude Include="GameStateMainMenu.h" />
-    <ClInclude Include="GameStatePlaying.h" />
-    <ClInclude Include="GameStateRecords.h" />
-    <ClInclude Include="LevelLoader.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="MenuBackground.h" />
-    <ClInclude Include="Text.h" />
-    <ClInclude Include="UnbreakableBlock.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">

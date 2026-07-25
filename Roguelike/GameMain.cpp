@@ -2,11 +2,7 @@
 // Authored by Aleksandr Rybalka (polterageist@gmail.com)
 
 #include <SFML/Graphics.hpp>
-#include "Application.h"
 #include "Engine.h"
-
-
-using namespace Roguelike;
 
 int main()
 {

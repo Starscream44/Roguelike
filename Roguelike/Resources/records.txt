@@ -1,6 +1,0 @@
-John 120
-Bob 40
-Jane 90
-Clementine 30
-Alice 60
-Player 1880
