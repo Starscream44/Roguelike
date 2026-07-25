@@ -3,13 +3,13 @@
 
 #include <SFML/Graphics.hpp>
 #include "Application.h"
+#include "Engine.h"
 
 
 using namespace Roguelike;
 
 int main()
 {
-	Application::Instance().Run();
-
+	Engine::Engine::Instance()->Run();
 	return 0;
 }
