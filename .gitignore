@@ -6,3 +6,15 @@ x86
 .idea
 ArkanoidGame/Resources/records.txt
 ArkanoidGame/Resources/savegame.txt
+
+# Legacy root-level engine files replaced by the folder-based architecture.
+/Engine/Engine.cpp
+/Engine/Engine.h
+/Engine/GameObject.cpp
+/Engine/GameObject.h
+/Engine/Sprite.cpp
+/Engine/Sprite.h
+/Engine/Vector.h
+/Engine/IDelayedAction.h
+/Engine/IObserver.h
+/Engine/randomizer.h
