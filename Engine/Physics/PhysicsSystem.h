@@ -1,5 +1,3 @@
-// @file PhysicsSystem.h
-
 #pragma once
 
 #include <set>

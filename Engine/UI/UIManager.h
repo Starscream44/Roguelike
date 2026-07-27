@@ -1,5 +1,3 @@
-// @file UIManager.h
-
 #pragma once
 
 #include "UIElement.h"

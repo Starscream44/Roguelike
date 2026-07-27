@@ -1,5 +1,3 @@
-// @file GameObject.cpp
-
 #include "pch.h"
 #include "GameObject.h"
 

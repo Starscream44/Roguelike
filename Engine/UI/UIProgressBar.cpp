@@ -1,5 +1,3 @@
-// @file UIProgressBar.cpp
-
 #include "pch.h"
 #include "UIProgressBar.h"
 

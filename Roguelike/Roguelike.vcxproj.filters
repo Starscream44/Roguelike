@@ -1,14 +1,504 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Characters">
+      <UniqueIdentifier>{BF14E247-76A7-432D-9A30-1FFD88587A7E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{E998E431-79E3-44F8-822E-6DD98B5DDE33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{EE7FCA60-19C0-4B5C-ADC0-E01CF865D69A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay">
+      <UniqueIdentifier>{A859158E-4E83-4AD5-A754-9E30597C370A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{600631B6-4E5C-447A-BC1D-E27B5451C579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Fonts">
+      <UniqueIdentifier>{D26A95DD-4E6D-4868-B007-9E3E29442BF7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sounds">
+      <UniqueIdentifier>{89AA3C5E-03F5-4116-94F2-A7D97689063B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Textures">
+      <UniqueIdentifier>{560AA331-081A-4BA6-97CC-B1D31D98E594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Textures\Floors">
+      <UniqueIdentifier>{8D69B8F9-300A-4946-8937-359188141ED1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Textures\Walls">
+      <UniqueIdentifier>{5202F5C6-8009-4D8E-A78A-A6B7D66CFD7A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\UI">
+      <UniqueIdentifier>{FB0892D6-0FAC-47E3-9476-42F915CAB6C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{FDA8AF72-0D20-4754-A51B-2CBF807C9126}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameMain.cpp">
-      <Filter>Sources</Filter>
+    <ClCompile Include="Characters\Character.cpp">
+      <Filter>Characters</Filter>
     </ClCompile>
+    <ClCompile Include="Characters\Creeper.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Characters\Enemy.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Characters\Player.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Characters\Warrior.cpp">
+      <Filter>Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\AttackComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\DeathComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\DetectionTriggerComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\DirectionalSpriteComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\GameUIComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\InventoryComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\ItemPickupComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PickupComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PlayerMovementComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PlayerSearchComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\ProjectileComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\RangedAttackComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\StatsComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="Gameplay\DeveloperLevel.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\EnemySpawner.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\Floor.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\GameNotifications.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\GameResourceLoader.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\ItemSpawner.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\LevelBuilder.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\LevelProgress.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\MazeGenerator.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\MazeNavigation.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\Wall.cpp">
+      <Filter>Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\EquipmentPanel.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\FramedPanel.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\GameScreenOverlay.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\HotbarPanel.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\HUD.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\InventoryPanel.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ItemDescriptionPanel.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\PopupMessage.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UITextureUtils.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UITextUtils.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Characters\Character.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Characters\Creeper.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Characters\Enemy.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Characters\Player.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Characters\Warrior.h">
+      <Filter>Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\AttackComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\DeathComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\DetectionTriggerComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\DirectionalSpriteComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\GameUIComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\InventoryComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\ItemPickupComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PickupComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PlayerMovementComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PlayerSearchComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\ProjectileComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\RangedAttackComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\StatsComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\GameConfig.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\DeveloperLevel.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\EnemySpawner.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\Floor.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\GameNotifications.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\GameResourceLoader.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\ItemData.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\ItemSpawner.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\LevelBuilder.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\LevelProgress.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\MazeGenerator.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\MazeNavigation.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\PlayerRunSnapshot.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\Wall.h">
+      <Filter>Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\EquipmentPanel.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\FramedPanel.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\GameScreenOverlay.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\HotbarPanel.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\HUD.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\InventoryPanel.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ItemDescriptionPanel.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\PopupMessage.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UIItemView.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UITextureUtils.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UITextUtils.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fonts\CGXYZPCAlt-Regular.otf">
+      <Filter>Resources\Fonts</Filter>
+    </None>
+    <None Include="Resources\Fonts\MPLUSRounded1c-Regular.ttf">
+      <Filter>Resources\Fonts</Filter>
+    </None>
+    <None Include="Resources\Sounds\background_1.ogg">
+      <Filter>Resources\Sounds</Filter>
+    </None>
+    <None Include="Resources\Sounds\background_2.ogg">
+      <Filter>Resources\Sounds</Filter>
+    </None>
+    <None Include="Resources\Sounds\background_3.ogg">
+      <Filter>Resources\Sounds</Filter>
+    </None>
+    <None Include="Resources\Sounds\background_4.ogg">
+      <Filter>Resources\Sounds</Filter>
+    </None>
+    <None Include="Resources\Textures\Creeper.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Creeper_default.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Creeper_left.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Creeper_right.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Creeper_top.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Enemy.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_1.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_2.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_3.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_4.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_5.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_6.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_7.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Floors\Floor_8.png">
+      <Filter>Resources\Textures\Floors</Filter>
+    </None>
+    <None Include="Resources\Textures\Player.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Player_default.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Player_down.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Player_left.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\player_projectile.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Player_right.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Player_top.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\quest_list.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_1.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_2.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_3.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_4.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_5.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_6.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_7.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Walls\Wall_8.png">
+      <Filter>Resources\Textures\Walls</Filter>
+    </None>
+    <None Include="Resources\Textures\Warrior_default.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Warrior_left.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Warrior_right.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\Textures\Warrior_top.png">
+      <Filter>Resources\Textures</Filter>
+    </None>
+    <None Include="Resources\UI\1dead_background.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\2dead_background.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\fire_1.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\fire_2.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\fire_3.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\fire_4.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\fire_5.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\fire_6.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\fire_start_game_background.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\hotbar_frame.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\hud_health_bar_fill.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\hud_health_bar_frame.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\inventory_menu_description.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\inventory_menu_grid.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\inventory_menu_top.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\item_armor.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\item_attack_potion.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\item_boots.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\item_health_potion.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\item_helmet.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\item_speed_potion.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\next_level_background.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\player_armor.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\player_avatar.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\popup_message.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\slot_equipment.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\slot_hotbar.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\slot_inventory.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\slot_weapon.png">
+      <Filter>Resources\UI</Filter>
+    </None>
+    <None Include="Resources\UI\start_game_background.png">
+      <Filter>Resources\UI</Filter>
+    </None>
   </ItemGroup>
 </Project>

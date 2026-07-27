@@ -1,5 +1,3 @@
-// @file UIAnimation.cpp
-
 #include "pch.h"
 #include "UIAnimation.h"
 

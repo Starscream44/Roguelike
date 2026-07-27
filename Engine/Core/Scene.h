@@ -1,5 +1,3 @@
-// @file Scene.h
-
 #pragma once
 
 namespace Engine

@@ -1,5 +1,3 @@
-// @file SpriteRendererComponent.h
-
 #pragma once
 
 #include "TransformComponent.h"

@@ -1,5 +1,3 @@
-// @file RenderSystem.cpp
-
 #include "pch.h"
 #include "RenderSystem.h"
 

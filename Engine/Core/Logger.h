@@ -1,5 +1,3 @@
-// @file Logger.h
-
 #pragma once
 
 #include <filesystem>

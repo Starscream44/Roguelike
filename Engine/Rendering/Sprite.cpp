@@ -1,5 +1,3 @@
-// @file Sprite.cpp
-
 #include "pch.h"
 #include "Sprite.h"
 

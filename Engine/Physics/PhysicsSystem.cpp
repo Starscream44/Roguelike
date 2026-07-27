@@ -1,5 +1,3 @@
-// @file PhysicsSystem.cpp
-
 #include "pch.h"
 #include "PhysicsSystem.h"
 

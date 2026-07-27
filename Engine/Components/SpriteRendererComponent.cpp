@@ -1,5 +1,3 @@
-// @file SpriteRendererComponent.cpp
-
 #include "pch.h"
 #include "SpriteRendererComponent.h"
 #include "TransformComponent.h"

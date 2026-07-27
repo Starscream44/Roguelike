@@ -1,5 +1,3 @@
-// @file TransformComponent.cpp
-
 #include "pch.h"
 #include "TransformComponent.h"
 

@@ -1,5 +1,3 @@
-// @file UIElement.h
-
 #pragma once
 
 #include "UIAnimation.h"

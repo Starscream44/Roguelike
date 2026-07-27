@@ -1,5 +1,3 @@
-// @file BoxColliderComponent.h
-
 #pragma once
 
 #include "ColliderComponent.h"

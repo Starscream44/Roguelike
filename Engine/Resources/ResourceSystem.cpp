@@ -1,5 +1,3 @@
-// @file ResourceSystem.cpp
-
 #include "pch.h"
 #include "ResourceSystem.h"
 
@@ -25,6 +23,11 @@ ResourceSystem* ResourceSystem::Instance()
 {
     static ResourceSystem resourceSystem;
     return &resourceSystem;
+}
+
+ResourceSystem::~ResourceSystem()
+{
+    Clear();
 }
 
 void ResourceSystem::LoadTexture(const std::string& name, std::string sourcePath, bool isSmooth)

@@ -1,5 +1,3 @@
-// @file AudioComponent.h
-
 #pragma once
 
 #include <SFML/Audio/Sound.hpp>

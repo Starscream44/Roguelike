@@ -1,5 +1,3 @@
-// @file TransformComponent.h
-
 #pragma once
 
 #include "Component.h"

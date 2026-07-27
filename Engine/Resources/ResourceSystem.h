@@ -1,5 +1,3 @@
-// @file ResourceSystem.h
-
 #pragma once
 
 #include <map>
@@ -42,7 +40,7 @@ class ResourceSystem
     std::map<std::string, sf::SoundBuffer*> soundBuffers;
 
     ResourceSystem() {}
-    ~ResourceSystem() {}
+    ~ResourceSystem();
 
     ResourceSystem(ResourceSystem const&) = delete;
     ResourceSystem& operator=(ResourceSystem const&) = delete;

@@ -1,5 +1,3 @@
-// @file UIAnimation.h
-
 #pragma once
 
 namespace Engine

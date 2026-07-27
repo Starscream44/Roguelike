@@ -1,5 +1,3 @@
-// @file GameObject.h
-
 #pragma once
 
 #include "TransformComponent.h"

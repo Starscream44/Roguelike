@@ -1,5 +1,3 @@
-// @file RigidbodyComponent.h
-
 #pragma once
 
 #include "TransformComponent.h"

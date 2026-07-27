@@ -1,5 +1,3 @@
-// @file RigidbodyComponent.cpp
-
 #include "pch.h"
 #include "RigidbodyComponent.h"
 

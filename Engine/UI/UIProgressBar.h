@@ -1,5 +1,3 @@
-// @file UIProgressBar.h
-
 #pragma once
 
 #include "UIElement.h"

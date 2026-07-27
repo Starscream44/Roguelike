@@ -1,5 +1,3 @@
-// @file Component.h
-
 #pragma once
 
 #include <SFML/Window/Event.hpp>

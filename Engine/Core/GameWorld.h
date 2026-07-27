@@ -1,5 +1,3 @@
-// @file GameWorld.h
-
 #pragma once
 
 #include "GameObject.h"

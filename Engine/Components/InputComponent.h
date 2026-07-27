@@ -1,5 +1,3 @@
-// @file InputComponent.h
-
 #pragma once
 
 #include "Component.h"

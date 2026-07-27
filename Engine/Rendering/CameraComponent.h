@@ -1,5 +1,3 @@
-// @file CameraComponent.h
-
 #pragma once
 
 #include "Component.h"

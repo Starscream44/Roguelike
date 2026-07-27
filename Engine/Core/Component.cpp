@@ -1,5 +1,3 @@
-// @file Component.cpp
-
 #include "pch.h"
 #include "Component.h"
 

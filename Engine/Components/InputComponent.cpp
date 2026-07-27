@@ -1,5 +1,3 @@
-// @file InputComponent.cpp
-
 #include "pch.h"
 #include "InputComponent.h"
 

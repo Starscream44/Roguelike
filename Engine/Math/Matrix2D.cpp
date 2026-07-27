@@ -1,5 +1,3 @@
-// @file Matrix2D.cpp
-
 #include "pch.h"
 #include "Matrix2D.h"
 

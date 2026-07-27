@@ -1,5 +1,3 @@
-// @file CameraComponent.cpp
-
 #include "pch.h"
 #include "CameraComponent.h"
 

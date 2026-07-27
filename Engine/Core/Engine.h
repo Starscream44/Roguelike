@@ -1,5 +1,3 @@
-// @file Engine.h
-
 #pragma once
 
 #ifndef NOMINMAX

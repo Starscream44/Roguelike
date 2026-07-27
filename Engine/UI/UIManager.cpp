@@ -1,5 +1,3 @@
-// @file UIManager.cpp
-
 #include "pch.h"
 #include "UIManager.h"
 

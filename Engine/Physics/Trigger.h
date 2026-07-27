@@ -1,5 +1,3 @@
-// @file Trigger.h
-
 #pragma once
 
 namespace Engine

@@ -1,5 +1,3 @@
-// @file SaveSystem.h
-
 #pragma once
 
 #include <any>

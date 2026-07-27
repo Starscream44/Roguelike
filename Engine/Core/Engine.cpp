@@ -1,10 +1,9 @@
-// @file Engine.cpp
-
 #include "pch.h"
 #include "Engine.h"
 
 #include "GameWorld.h"
 #include "RenderSystem.h"
+#include "ResourceSystem.h"
 #include "Scene.h"
 #include "Logger.h"
 
@@ -68,6 +67,7 @@ void Engine::Run()
     }
 
     scene->Stop();
+    ResourceSystem::Instance()->Clear();
 }
 
 void Engine::ProcessSceneRestart()

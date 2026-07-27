@@ -1,5 +1,3 @@
-// @file Sprite.h
-
 #pragma once
 
 #include <SFML/Graphics.hpp>

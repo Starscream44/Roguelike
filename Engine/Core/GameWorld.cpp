@@ -1,5 +1,3 @@
-// @file GameWorld.cpp
-
 #include "pch.h"
 #include "GameWorld.h"
 

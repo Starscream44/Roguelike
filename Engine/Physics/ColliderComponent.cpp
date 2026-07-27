@@ -1,5 +1,3 @@
-// @file ColliderComponent.cpp
-
 #include "pch.h"
 #include "ColliderComponent.h"
 

@@ -1,5 +1,3 @@
-// @file SpriteColliderComponent.cpp
-
 #include "pch.h"
 #include "SpriteColliderComponent.h"
 

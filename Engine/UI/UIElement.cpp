@@ -1,5 +1,3 @@
-// @file UIElement.cpp
-
 #include "pch.h"
 #include "UIElement.h"
 

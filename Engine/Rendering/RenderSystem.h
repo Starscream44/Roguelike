@@ -1,5 +1,3 @@
-// @file RenderSystem.h
-
 #pragma once
 
 #include <SFML/Graphics.hpp>

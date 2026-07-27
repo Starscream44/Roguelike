@@ -1,5 +1,3 @@
-// @file Trigger.cpp
-
 #include "pch.h"
 #include "Trigger.h"
 #include "ColliderComponent.h"

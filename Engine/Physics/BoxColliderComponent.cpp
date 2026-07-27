@@ -1,5 +1,3 @@
-// @file BoxColliderComponent.cpp
-
 #include "pch.h"
 #include "BoxColliderComponent.h"
 

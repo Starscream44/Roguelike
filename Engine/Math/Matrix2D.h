@@ -1,5 +1,3 @@
-// @file Matrix2D.h
-
 #pragma once
 
 #include <cmath>

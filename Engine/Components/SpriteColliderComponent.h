@@ -1,5 +1,3 @@
-// @file SpriteColliderComponent.h
-
 #pragma once
 
 #include "ColliderComponent.h"

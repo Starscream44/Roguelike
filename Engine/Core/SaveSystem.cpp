@@ -1,5 +1,3 @@
-// @file SaveSystem.cpp
-
 #include "pch.h"
 #include "SaveSystem.h"
 

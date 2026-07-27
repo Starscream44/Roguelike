@@ -1,5 +1,3 @@
-// @file AudioComponent.cpp
-
 #include "pch.h"
 
 #include "AudioComponent.h"

@@ -99,12 +99,18 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Characters;$(ProjectDir)Components;$(ProjectDir)Config;$(ProjectDir)Gameplay;$(ProjectDir)UI;$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(OutDir)Resources" rmdir /S /Q "$(OutDir)Resources"
+if exist "$(ProjectDir)Resources" xcopy /E /I /Y "$(ProjectDir)Resources" "$(OutDir)Resources\" &gt; nul
+if exist "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" copy /Y "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" "$(OutDir)openal32.dll" &gt; nul</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -114,7 +120,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Characters;$(ProjectDir)Components;$(ProjectDir)Config;$(ProjectDir)Gameplay;$(ProjectDir)UI;$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,6 +129,11 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(OutDir)Resources" rmdir /S /Q "$(OutDir)Resources"
+if exist "$(ProjectDir)Resources" xcopy /E /I /Y "$(ProjectDir)Resources" "$(OutDir)Resources\" &gt; nul
+if exist "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" copy /Y "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" "$(OutDir)openal32.dll" &gt; nul</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -129,17 +141,23 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Characters;$(ProjectDir)Components;$(ProjectDir)Config;$(ProjectDir)Gameplay;$(ProjectDir)UI;$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\SFML\SFML-2.5.1\lib;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\SFML\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;ws2_32.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>
       </IgnoreSpecificDefaultLibraries>
     </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(OutDir)Resources" rmdir /S /Q "$(OutDir)Resources"
+if exist "$(ProjectDir)Resources" xcopy /E /I /Y "$(ProjectDir)Resources" "$(OutDir)Resources\" &gt; nul
+if exist "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" copy /Y "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" "$(OutDir)openal32.dll" &gt; nul</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -149,27 +167,189 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Characters;$(ProjectDir)Components;$(ProjectDir)Config;$(ProjectDir)Gameplay;$(ProjectDir)UI;$(ProjectDir)..\Engine\Core;$(ProjectDir)..\Engine\Components;$(ProjectDir)..\Engine\Physics;$(ProjectDir)..\Engine\Rendering;$(ProjectDir)..\Engine\Resources;$(ProjectDir)..\Engine\Math;$(ProjectDir)..\Engine\Audio;$(ProjectDir)..\Engine\UI;$(ProjectDir)..\Engine;$(ProjectDir)..\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\SFML\SFML-2.5.1\lib;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\SFML\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-main.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-audio-s.lib;sfml-network-s.lib;ws2_32.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>
       </IgnoreSpecificDefaultLibraries>
     </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(OutDir)Resources" rmdir /S /Q "$(OutDir)Resources"
+if exist "$(ProjectDir)Resources" xcopy /E /I /Y "$(ProjectDir)Resources" "$(OutDir)Resources\" &gt; nul
+if exist "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" copy /Y "$(ProjectDir)..\SFML\SFML-2.5.1\bin\openal32.dll" "$(OutDir)openal32.dll" &gt; nul</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="GameMain.cpp" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
       <Project>{0785589b-6e7e-4d86-9dbe-ce7aa50d6b3f}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Characters\Character.cpp" />
+    <ClCompile Include="Characters\Creeper.cpp" />
+    <ClCompile Include="Characters\Enemy.cpp" />
+    <ClCompile Include="Characters\Player.cpp" />
+    <ClCompile Include="Characters\Warrior.cpp" />
+    <ClCompile Include="Components\AttackComponent.cpp" />
+    <ClCompile Include="Components\DeathComponent.cpp" />
+    <ClCompile Include="Components\DetectionTriggerComponent.cpp" />
+    <ClCompile Include="Components\DirectionalSpriteComponent.cpp" />
+    <ClCompile Include="Components\GameUIComponent.cpp" />
+    <ClCompile Include="Components\InventoryComponent.cpp" />
+    <ClCompile Include="Components\ItemPickupComponent.cpp" />
+    <ClCompile Include="Components\PickupComponent.cpp" />
+    <ClCompile Include="Components\PlayerMovementComponent.cpp" />
+    <ClCompile Include="Components\PlayerSearchComponent.cpp" />
+    <ClCompile Include="Components\ProjectileComponent.cpp" />
+    <ClCompile Include="Components\RangedAttackComponent.cpp" />
+    <ClCompile Include="Components\StatsComponent.cpp" />
+    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="Gameplay\DeveloperLevel.cpp" />
+    <ClCompile Include="Gameplay\EnemySpawner.cpp" />
+    <ClCompile Include="Gameplay\Floor.cpp" />
+    <ClCompile Include="Gameplay\GameNotifications.cpp" />
+    <ClCompile Include="Gameplay\GameResourceLoader.cpp" />
+    <ClCompile Include="Gameplay\ItemSpawner.cpp" />
+    <ClCompile Include="Gameplay\LevelBuilder.cpp" />
+    <ClCompile Include="Gameplay\LevelProgress.cpp" />
+    <ClCompile Include="Gameplay\MazeGenerator.cpp" />
+    <ClCompile Include="Gameplay\MazeNavigation.cpp" />
+    <ClCompile Include="Gameplay\Wall.cpp" />
+    <ClCompile Include="UI\EquipmentPanel.cpp" />
+    <ClCompile Include="UI\FramedPanel.cpp" />
+    <ClCompile Include="UI\GameScreenOverlay.cpp" />
+    <ClCompile Include="UI\HotbarPanel.cpp" />
+    <ClCompile Include="UI\HUD.cpp" />
+    <ClCompile Include="UI\InventoryPanel.cpp" />
+    <ClCompile Include="UI\ItemDescriptionPanel.cpp" />
+    <ClCompile Include="UI\PopupMessage.cpp" />
+    <ClCompile Include="UI\UITextureUtils.cpp" />
+    <ClCompile Include="UI\UITextUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Characters\Character.h" />
+    <ClInclude Include="Characters\Creeper.h" />
+    <ClInclude Include="Characters\Enemy.h" />
+    <ClInclude Include="Characters\Player.h" />
+    <ClInclude Include="Characters\Warrior.h" />
+    <ClInclude Include="Components\AttackComponent.h" />
+    <ClInclude Include="Components\DeathComponent.h" />
+    <ClInclude Include="Components\DetectionTriggerComponent.h" />
+    <ClInclude Include="Components\DirectionalSpriteComponent.h" />
+    <ClInclude Include="Components\GameUIComponent.h" />
+    <ClInclude Include="Components\InventoryComponent.h" />
+    <ClInclude Include="Components\ItemPickupComponent.h" />
+    <ClInclude Include="Components\PickupComponent.h" />
+    <ClInclude Include="Components\PlayerMovementComponent.h" />
+    <ClInclude Include="Components\PlayerSearchComponent.h" />
+    <ClInclude Include="Components\ProjectileComponent.h" />
+    <ClInclude Include="Components\RangedAttackComponent.h" />
+    <ClInclude Include="Components\StatsComponent.h" />
+    <ClInclude Include="Config\GameConfig.h" />
+    <ClInclude Include="Gameplay\DeveloperLevel.h" />
+    <ClInclude Include="Gameplay\EnemySpawner.h" />
+    <ClInclude Include="Gameplay\Floor.h" />
+    <ClInclude Include="Gameplay\GameNotifications.h" />
+    <ClInclude Include="Gameplay\GameResourceLoader.h" />
+    <ClInclude Include="Gameplay\ItemData.h" />
+    <ClInclude Include="Gameplay\ItemSpawner.h" />
+    <ClInclude Include="Gameplay\LevelBuilder.h" />
+    <ClInclude Include="Gameplay\LevelProgress.h" />
+    <ClInclude Include="Gameplay\MazeGenerator.h" />
+    <ClInclude Include="Gameplay\MazeNavigation.h" />
+    <ClInclude Include="Gameplay\PlayerRunSnapshot.h" />
+    <ClInclude Include="Gameplay\Wall.h" />
+    <ClInclude Include="UI\EquipmentPanel.h" />
+    <ClInclude Include="UI\FramedPanel.h" />
+    <ClInclude Include="UI\GameScreenOverlay.h" />
+    <ClInclude Include="UI\HotbarPanel.h" />
+    <ClInclude Include="UI\HUD.h" />
+    <ClInclude Include="UI\InventoryPanel.h" />
+    <ClInclude Include="UI\ItemDescriptionPanel.h" />
+    <ClInclude Include="UI\PopupMessage.h" />
+    <ClInclude Include="UI\UIItemView.h" />
+    <ClInclude Include="UI\UITextureUtils.h" />
+    <ClInclude Include="UI\UITextUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fonts\CGXYZPCAlt-Regular.otf" />
+    <None Include="Resources\Fonts\MPLUSRounded1c-Regular.ttf" />
+    <None Include="Resources\Sounds\background_1.ogg" />
+    <None Include="Resources\Sounds\background_2.ogg" />
+    <None Include="Resources\Sounds\background_3.ogg" />
+    <None Include="Resources\Sounds\background_4.ogg" />
+    <None Include="Resources\Textures\Creeper.png" />
+    <None Include="Resources\Textures\Creeper_default.png" />
+    <None Include="Resources\Textures\Creeper_left.png" />
+    <None Include="Resources\Textures\Creeper_right.png" />
+    <None Include="Resources\Textures\Creeper_top.png" />
+    <None Include="Resources\Textures\Enemy.png" />
+    <None Include="Resources\Textures\Floors\Floor_1.png" />
+    <None Include="Resources\Textures\Floors\Floor_2.png" />
+    <None Include="Resources\Textures\Floors\Floor_3.png" />
+    <None Include="Resources\Textures\Floors\Floor_4.png" />
+    <None Include="Resources\Textures\Floors\Floor_5.png" />
+    <None Include="Resources\Textures\Floors\Floor_6.png" />
+    <None Include="Resources\Textures\Floors\Floor_7.png" />
+    <None Include="Resources\Textures\Floors\Floor_8.png" />
+    <None Include="Resources\Textures\Player.png" />
+    <None Include="Resources\Textures\Player_default.png" />
+    <None Include="Resources\Textures\Player_down.png" />
+    <None Include="Resources\Textures\Player_left.png" />
+    <None Include="Resources\Textures\player_projectile.png" />
+    <None Include="Resources\Textures\Player_right.png" />
+    <None Include="Resources\Textures\Player_top.png" />
+    <None Include="Resources\Textures\quest_list.png" />
+    <None Include="Resources\Textures\Walls\Wall_1.png" />
+    <None Include="Resources\Textures\Walls\Wall_2.png" />
+    <None Include="Resources\Textures\Walls\Wall_3.png" />
+    <None Include="Resources\Textures\Walls\Wall_4.png" />
+    <None Include="Resources\Textures\Walls\Wall_5.png" />
+    <None Include="Resources\Textures\Walls\Wall_6.png" />
+    <None Include="Resources\Textures\Walls\Wall_7.png" />
+    <None Include="Resources\Textures\Walls\Wall_8.png" />
+    <None Include="Resources\Textures\Warrior_default.png" />
+    <None Include="Resources\Textures\Warrior_left.png" />
+    <None Include="Resources\Textures\Warrior_right.png" />
+    <None Include="Resources\Textures\Warrior_top.png" />
+    <None Include="Resources\UI\1dead_background.png" />
+    <None Include="Resources\UI\2dead_background.png" />
+    <None Include="Resources\UI\fire_1.png" />
+    <None Include="Resources\UI\fire_2.png" />
+    <None Include="Resources\UI\fire_3.png" />
+    <None Include="Resources\UI\fire_4.png" />
+    <None Include="Resources\UI\fire_5.png" />
+    <None Include="Resources\UI\fire_6.png" />
+    <None Include="Resources\UI\fire_start_game_background.png" />
+    <None Include="Resources\UI\hotbar_frame.png" />
+    <None Include="Resources\UI\hud_health_bar_fill.png" />
+    <None Include="Resources\UI\hud_health_bar_frame.png" />
+    <None Include="Resources\UI\inventory_menu_description.png" />
+    <None Include="Resources\UI\inventory_menu_grid.png" />
+    <None Include="Resources\UI\inventory_menu_top.png" />
+    <None Include="Resources\UI\item_armor.png" />
+    <None Include="Resources\UI\item_attack_potion.png" />
+    <None Include="Resources\UI\item_boots.png" />
+    <None Include="Resources\UI\item_health_potion.png" />
+    <None Include="Resources\UI\item_helmet.png" />
+    <None Include="Resources\UI\item_speed_potion.png" />
+    <None Include="Resources\UI\next_level_background.png" />
+    <None Include="Resources\UI\player_armor.png" />
+    <None Include="Resources\UI\player_avatar.png" />
+    <None Include="Resources\UI\popup_message.png" />
+    <None Include="Resources\UI\slot_equipment.png" />
+    <None Include="Resources\UI\slot_hotbar.png" />
+    <None Include="Resources\UI\slot_inventory.png" />
+    <None Include="Resources\UI\slot_weapon.png" />
+    <None Include="Resources\UI\start_game_background.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
